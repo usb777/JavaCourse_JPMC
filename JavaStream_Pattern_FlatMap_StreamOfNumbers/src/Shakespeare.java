@@ -16,9 +16,7 @@ import java.util.stream.Collectors;
 public class Shakespeare {
 
 	public static void main(String[] args) throws IOException {
-		// http://introcs.cs.princeton.edu/java/data/words.shakespeare.txt
-		// http://introcs.cs.princeton.edu/java/data/ospd.txt
-
+	
 		Set<String> shakespeareWords = Files.lines(Paths.get("files/words.shakespeare.txt"))
 				.map(word -> word.toLowerCase())
 				.collect(Collectors.toSet());
