@@ -1,8 +1,6 @@
 
 import java.util.List;
-import java.util.ArrayList;
-import java.util.concurrent.ConcurrentLinkedDeque;
-import java.util.concurrent.ConcurrentSkipListSet;
+
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -21,7 +19,7 @@ public class ParallelStreams {
         List<String> collect = 
                 Stream.iterate("+", s -> s + "+")
                 .parallel()
-                .limit(1000)
+                .limit(6)
                 // .peek(s -> System.out.println(s + " processed in the thread " + Thread.currentThread().getName()))
                 // .forEach(s -> strings.add(s));
                 .collect(Collectors.toList());
