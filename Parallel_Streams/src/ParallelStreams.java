@@ -17,11 +17,13 @@ public class ParallelStreams {
         List<String> collect = 
                 Stream.iterate("+", s -> s + "+")
                 .parallel()
-                .limit(6)
+                .limit(1000)
                 // .peek(s -> System.out.println(s + " processed in the thread " + Thread.currentThread().getName()))
-                // .forEach(s -> strings.add(s));
+                 //.forEach(s -> strings.add(s));
                 .collect(Collectors.toList());
         
         System.out.println("# " + collect.size());
+        System.out.println(collect.get(2));
+        System.out.println(collect.get(100));
     }
 }
