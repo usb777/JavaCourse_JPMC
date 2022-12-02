@@ -24,7 +24,6 @@ public class ParallelStreams {
                 .collect(Collectors.toList());
         
         System.out.println("# " + collect.size());
-        List<String> ownList =Stream.of("Test1", "Test2").collect(Collectors.toList()); 
-        
+        List<String> ownList =Stream.of("Test1", "Test2").collect(Collectors.toList());         
     }
 }
