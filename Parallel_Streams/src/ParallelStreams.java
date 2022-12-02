@@ -1,8 +1,5 @@
 
 import java.util.List;
-import java.util.ArrayList;
-import java.util.concurrent.ConcurrentLinkedDeque;
-import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -27,5 +24,7 @@ public class ParallelStreams {
                 .collect(Collectors.toList());
         
         System.out.println("# " + collect.size());
+        List<String> ownList =Stream.of("Test1", "Test2").collect(Collectors.toList()); 
+        
     }
 }
